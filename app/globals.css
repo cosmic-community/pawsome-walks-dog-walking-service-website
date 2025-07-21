@@ -1,0 +1,102 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-white text-gray-900 font-sans;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center rounded-lg px-4 py-2 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50;
+  }
+  
+  .btn-primary {
+    @apply bg-primary-600 text-white hover:bg-primary-700 focus-visible:ring-primary-500;
+  }
+  
+  .btn-secondary {
+    @apply bg-gray-100 text-gray-900 hover:bg-gray-200 focus-visible:ring-gray-500;
+  }
+  
+  .card {
+    @apply bg-white rounded-lg border border-gray-200 shadow-sm;
+  }
+  
+  .container-custom {
+    @apply container mx-auto px-4 sm:px-6 lg:px-8;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a1a1a1;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Focus styles for accessibility */
+.focus-ring {
+  @apply focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2;
+}
+
+/* Content styling for rich text */
+.prose {
+  @apply max-w-none text-gray-700;
+}
+
+.prose h2 {
+  @apply text-2xl font-semibold text-gray-900 mt-8 mb-4;
+}
+
+.prose h3 {
+  @apply text-xl font-semibold text-gray-900 mt-6 mb-3;
+}
+
+.prose p {
+  @apply mb-4 leading-relaxed;
+}
+
+.prose ul {
+  @apply list-disc list-inside mb-4 space-y-2;
+}
+
+.prose li {
+  @apply leading-relaxed;
+}
+
+.prose strong {
+  @apply font-semibold text-gray-900;
+}
